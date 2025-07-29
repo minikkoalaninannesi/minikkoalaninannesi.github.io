@@ -44,6 +44,9 @@ main {
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+.about-main {
+  text-align: center;
+}
 
 /* ------------------- */
 /* Renk Değişkenleri */
@@ -194,6 +197,12 @@ footer {
 .site-logo {
   width: 60px;      /* ya da 24px, 40px vb. */
   height: 60px;     /* oranlı kalması için aynı px değeri */
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+.site-logo-small {
+  width: 20px;      /* ya da 24px, 40px vb. */
+  height: 20px;     /* oranlı kalması için aynı px değeri */
   margin-right: 0.5rem;
   object-fit: contain;
 }
