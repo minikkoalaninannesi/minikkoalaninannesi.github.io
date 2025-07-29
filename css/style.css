@@ -189,3 +189,17 @@ footer {
   text-align: right;
 }
 
+
+/* Logonun boyutunu ve başlıktan boşluk bırakma */
+.site-logo {
+  width: 60px;      /* ya da 24px, 40px vb. */
+  height: 60px;     /* oranlı kalması için aynı px değeri */
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
+.site-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;           /* var olan boyutu koruyun */
+      /* ya da isteğe bağlı beyaz, vs. */
+}
