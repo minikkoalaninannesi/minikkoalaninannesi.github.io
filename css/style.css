@@ -53,8 +53,8 @@ main {
 /* (en başta da olabilir) */
 /* ------------------- */
 :root {
-  --color-primary:   #b9b48f;
-  --color-secondary: #d1cfc5;
+  --color-primary:   #d48b13;
+  --color-secondary: #eba12a;
   --color-bg:        #faf9f5;
   --color-text:      #bdb7a9;
 }
@@ -121,7 +121,7 @@ nav a:hover {
   text-decoration: none;
 }
 .btn:hover {
-  background-color: #d48b13;
+  background-color: #be7704;
 }
 
 /* Main Alan (Hakkında ve İletişim için) */
@@ -212,3 +212,91 @@ footer {
   font-size: 1.5rem;           /* var olan boyutu koruyun */
       /* ya da isteğe bağlı beyaz, vs. */
 }
+
+/* ——— Intro Bölümü ——— */
+.intro {
+  max-width: 90vw;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.intro h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.intro p {
+  margin-bottom: 1.5rem;
+}
+
+.intro h2 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.intro ul {
+  list-style: disc inside;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro li {
+  margin-bottom: 0.5rem;
+}
+.intro {
+  text-align: center;
+}
+.intro .btn {
+  /* Eğer butonun genişliği sabitse inline-block kalabilir */
+  display: inline-block;
+}
+
+.intro h3 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* 1) Nav kapsayıcısını sağa yaslı ve aralıklı yap */
+.nav {
+  display: flex;
+  justify-content: flex-end; /* sağa yaslar */
+  gap: 0.75rem;              /* butonlar arası boşluk */
+  padding: 1rem;             /* dilersen nav ile sayfa kenarı arası boşluk ekle */
+}
+
+/* 2) Butonlara “kutucuk” görünümü */
+.nav .nav-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;             /* dikey / yatay iç boşluk */
+  background-color:  #eba12a;           /* arka plan */
+  border: 2px solid #a0640a;           /* ince çerçeve */
+  border-radius: 6px;               /* köşeleri hafif yuvarla */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* hafif gölge */
+  text-decoration: none;            /* alt çizgi kaldır */
+  color: #333;                      /* yazı rengi */
+  font-weight: 500;
+  transition: 
+    background-color 0.2s ease, 
+    transform 0.2s ease;
+}
+
+.nav .nav-btn:hover,
+.nav .nav-btn:focus {
+  background-color: #d48b13;/* Biraz koyultulmuş hover rengi */
+  border-color: #d79424;
+  transform: translateY(-2px);}
+ s
