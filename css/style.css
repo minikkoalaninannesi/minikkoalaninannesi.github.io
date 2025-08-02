@@ -273,9 +273,9 @@ html {
 /* 1) Nav kapsayıcısını sağa yaslı ve aralıklı yap */
 .nav {
   display: flex;
-  justify-content: flex-end; /* sağa yaslar */
-  gap: 0.75rem;              /* butonlar arası boşluk */
-  padding: 1rem;             /* dilersen nav ile sayfa kenarı arası boşluk ekle */
+  justify-content: flex-end;
+  flex-wrap: wrap;      /* satırlar dolduğunda bir sonraki satıra geç */
+  gap: 0.75rem;         
 }
 
 /* 2) Butonlara “kutucuk” görünümü */
@@ -289,6 +289,8 @@ html {
   text-decoration: none;            /* alt çizgi kaldır */
   color: #333;                      /* yazı rengi */
   font-weight: 500;
+   flex: 0 1 auto;       /* gerekirse daralır ama taşmaz */
+  margin-bottom: 0.5rem; /* wrap sonrası alt boşluk sağlar */
   transition: 
     background-color 0.2s ease, 
     transform 0.2s ease;
@@ -299,4 +301,14 @@ html {
   background-color: #d48b13;/* Biraz koyultulmuş hover rengi */
   border-color: #d79424;
   transform: translateY(-2px);}
- s
+
+  
+ @media (max-width: 600px) {
+  .nav {
+    justify-content: center; /* küçük ekranda ortaya hizala */
+  }
+  .nav .nav-btn {
+    flex: 1 1 100%;     /* her buton tam genişlik kaplar */
+    text-align: center;
+  }
+}
